@@ -50,4 +50,4 @@ To run this project locally, follow these steps:
 
 ### Author
 
-[Dev_By<Ravindu>]
+[Dev_By_Ravindu]

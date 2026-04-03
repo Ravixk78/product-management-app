@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Product Management App
 
-## Getting Started
+A professional web application designed to manage a product catalog efficiently. This tool allows users to track inventory with a clean and modern user interface, providing a streamlined experience for core management tasks.
 
-First, run the development server:
+### Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Framework: Next.js (App Router)
+- Library: React
+- Styling: Tailwind CSS
+- Persistence: Browser localStorage
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Add products with name, price, description, and image URL
+- View a responsive grid of all stored products
+- Search and filter products by name or description
+- Edit existing product details with real-time updates
+- Delete products from the inventory catalog
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Getting Started
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open http://localhost:3000 in your browser to view the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project Structure (Brief)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- app: Contains the main page, global styles, and layout configuration.
+- components: Reusable UI elements including the product form, list, and individual cards.
+- utils: Helper functions for managing data persistence within the browser storage.
 
-## Deploy on Vercel
+### Assumptions and Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Technical Assumption: All data is stored in the browser's localStorage for simplicity and immediate persistence without a backend.
+- Limitation: No external backend or database is used, meaning data is local to the specific browser and device.
+- Future Improvements:
+  - Integration with a persistent database (e.g., PostgreSQL or MongoDB)
+  - Implementation of a REST or GraphQL API
+  - User authentication and role-based access control
+  - Advanced image upload support instead of URL-only links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Author
+
+[Dev_By</Ravindu>]

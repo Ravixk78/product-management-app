@@ -31,77 +31,77 @@ export default function ProductForm({ onSubmit, initialProduct = null, onCancel 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 space-y-4 backdrop-blur-sm">
-      <h2 className="text-xl font-semibold text-white mb-6">
-        {initialProduct ? "Edit Product" : "Add New Product"}
+    <form onSubmit={handleSubmit} className="bg-white border-2 border-slate-900 p-8 rounded-3xl shadow-2xl shadow-slate-200/40 space-y-8">
+      <h2 className="text-3xl font-black text-slate-950 leading-none tracking-tighter">
+        {initialProduct ? "Modify Details" : "Add New Item"}
       </h2>
       
-      <div className="space-y-1">
-        <label className="text-sm font-medium text-gray-400">Product Name</label>
+      <div className="space-y-2">
+        <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Title</label>
         <input
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Enter product name"
+          placeholder="Ex: Smart Projector"
           required
-          className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+          className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-8 focus:ring-blue-500/5 focus:border-blue-500 transition-all font-bold"
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-1">
-          <label className="text-sm font-medium text-gray-400">Price ($)</label>
+      <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Price (LKR)</label>
           <input
             type="number"
             name="price"
             value={formData.price}
             onChange={handleChange}
-            placeholder="0.00"
-            step="0.01"
+            placeholder="0"
+            step="1"
             required
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+            className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-8 focus:ring-blue-500/5 focus:border-blue-500 transition-all font-bold"
           />
         </div>
-        <div className="space-y-1">
-          <label className="text-sm font-medium text-gray-400">Image URL (Optional)</label>
+        <div className="space-y-2">
+          <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Asset Link</label>
           <input
             type="url"
             name="image"
             value={formData.image}
             onChange={handleChange}
-            placeholder="https://..."
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+            placeholder="URL Here"
+            className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-8 focus:ring-blue-500/5 focus:border-blue-500 transition-all font-bold"
           />
         </div>
       </div>
 
-      <div className="space-y-1">
-        <label className="text-sm font-medium text-gray-400">Description</label>
+      <div className="space-y-2">
+        <label className="text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Description</label>
         <textarea
           name="description"
           value={formData.description}
           onChange={handleChange}
-          placeholder="Brief product description"
-          rows="3"
-          className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all resize-none"
+          placeholder="Detailed specs…"
+          rows="5"
+          className="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-5 py-4 text-slate-900 placeholder-slate-300 focus:outline-none focus:ring-8 focus:ring-blue-500/5 focus:border-blue-500 transition-all resize-none font-bold leading-relaxed"
         />
       </div>
 
-      <div className="flex gap-3 pt-2">
+      <div className="flex flex-col gap-4 pt-4">
         <button
           type="submit"
-          className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 rounded-lg transition-colors shadow-lg shadow-indigo-500/20"
+          className="w-full bg-slate-950 hover:bg-blue-600 text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-slate-900/20 active:scale-[0.98] tracking-tighter text-xl uppercase"
         >
-          {initialProduct ? "Update Product" : "Save Product"}
+          {initialProduct ? "Apply Changes" : "Confirm Addition"}
         </button>
         {onCancel && (
           <button
             type="button"
             onClick={onCancel}
-            className="px-6 py-2.5 border border-gray-700 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors"
+            className="w-full py-5 border-2 border-slate-900 text-slate-900 font-black hover:bg-slate-50 rounded-2xl transition-all text-sm uppercase tracking-widest"
           >
-            Cancel
+            Go Back
           </button>
         )}
       </div>
